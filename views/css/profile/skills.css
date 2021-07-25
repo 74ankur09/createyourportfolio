@@ -1,0 +1,66 @@
+@import "../var.css";
+
+#skills {
+    font-family: 'Lato';
+    font-size: min(1vw,2vh);
+    display: grid;
+    grid-template-rows: 12vh auto;
+    grid-template-columns: 100vw;
+}
+
+
+#skills-container {
+    padding: 2% 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skill-container {
+    height: 100%;
+    flex: 1 1 0px;
+    display: grid;
+    grid-template-rows: fit-content 20em;
+    grid-template-columns: 1fr;
+    align-items: center;
+    /* background: black; */
+}
+
+.skill-percentage {
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:fit-content;
+    padding: 1em;
+    /* background: blue; */
+}
+
+.skill-detail {
+    /* background-color: black; */
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    margin: 1em 0em;
+    line-height: 3em;
+}
+
+.skill-name {
+    text-align: center;
+    font-size: 1.75em;
+    letter-spacing: 0.1em;
+    color: var(--textfont);
+}
+
+
+.skill-desc {
+    z-index: 2;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 1.3em;
+    word-wrap:break-word;
+    letter-spacing: 0.1em;
+    color: var(--textfont);
+}

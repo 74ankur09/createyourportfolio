@@ -1,0 +1,87 @@
+@import "../var.css";
+@import "home.css";
+@import "skills.css";
+@import "projects.css";
+
+* {
+    padding:0;
+    margin:0;
+}
+
+body {
+    font-size: 1.5vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max(8vw,8vh) auto;
+    background: linear-gradient(to right bottom,var(--mediumback), var(--darkback));
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+nav {
+    font-size: 1.25em;
+    grid-row: 1/2;
+    width: 100vw;
+    box-sizing: border-box;
+    display: grid;
+    margin: 0em 0em;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+}
+
+.logo-container {
+    grid-column: 1/2;
+    justify-self: start;
+    padding:0em 2em;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.logo{
+  width: 3em;
+}
+
+.navlinks {
+    grid-column: 2/6;
+    justify-self: end;
+    font-family: 'Poppins';
+    font-weight: 300;
+    margin: 0 1em 0 0; 
+    display: flex;
+    justify-content: space-around;
+}
+
+.navlink {
+    margin: 0.5em;
+    color: var(--darkfont);
+}
+
+.content { 
+    width: 100vw;
+    grid-row: 2/3;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--darkfont);
+    letter-spacing: 0.1em;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: max(3vw,5vh);
+}
+
+.headimg {
+    letter-spacing: 0.25em;
+    position: relative;
+    top:0.1em;
+}
+
+
+@media (max-width: 700px) {
+    body {
+        font-size: 1.5vh;
+    }
+}

@@ -1,0 +1,73 @@
+@import "../var.css";
+
+a {
+    text-decoration: none;
+    color: inherit; 
+    font-family: 'Roboto', 'Arial';
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+#projects {
+    font-family: 'Lato';
+    font-size: max(1vw,1.3vh);
+    display: grid;
+    grid-template-rows: 12vh auto;
+    grid-template-columns: 100vw;
+    justify-content: center;
+}
+
+
+#projects-container {
+    justify-self: center;
+    width: 70vw;
+    overflo-y: scroll;
+}
+
+.project-container {
+    background-color: var(--darkback);
+    margin: 2em;
+    padding: 2em;
+    border-radius: 1em;
+    color: var(--textfont);
+}
+
+.project-title {
+    font-size: 2em;
+    padding-bottom: 0.5em;
+    color: var(--lightfont);
+    letter-spacing: 0.1em;
+}
+
+.project-desc {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+}
+
+.project-desc p {
+    margin: 1em 0;
+}
+
+.project-link-container {
+    padding-top: 1em;
+    font-size: 1.5em;
+    color: var(--darkfont)
+}
+
+.project-link-container .fab {
+    padding-right: 0.5em;
+}
+
+
+
+@media (max-width: 700px) {
+    
+    #projects-container {
+        width: 80vw;
+    }
+
+}

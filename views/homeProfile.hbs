@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' 'unsafe-inline'; img-src 'self'; style-src-elem 'self' https:;  font-src https:;  script-src *">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ankur</title>
+        <meta name="description" content="Portfolio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/resources/image/logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/profile/generalStyle.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo-container">
+                <img class="logo" src="/resources/image/logo.png">
+            </div>
+            <div class="navlinks">
+                <div class="navlink"><a href="./home">Home</a></div>
+                <div class="navlink"><a href="./projects">Projects</a></div>
+            </div>
+        </nav>
+
+        <div class="content" id = "home">
+            <div class="back">
+                <div id="bigCircle">
+                    <div id="smallCircle"></div>
+                </div>
+            </div>
+            <div class = "about">
+                <div class="intro">I<span id="apostrophe">'</span>M <br><span id="name">{{name}}</span></div>
+                <div id="detail">{{desc1}} &amp;<br> {{desc2}}</div>
+            </div>
+            <div class = "profile">
+                <div class="profilepicContainer">
+                    <span class="picafter"><img class="profilepic" src="/resources/image/{{displayImage}}"></span>
+                </div>
+                <div class="profilelinks">
+                    <a target="_blank" href="https://www.linkedin.com/in/{{linkedin}}"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://github.com/{{github}}"><i class="fab fa-github" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/{{facebook}}"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/{{instagram}}"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://twitter.com/{{twitter}}"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+
+                </div>
+            </div>
+            <div id = "quotes"> <div id="changeText"></div>
+            {{!-- <div id="cursor">|</div> --}}
+        </div>
+
+    </body>
+    {{!-- <script src="https://kit.fontawesome.com/7477a32428.js" crossorigin="anonymous"></script> --}}
+    <script type="module" src="/Js/profile/main.js"></script>
+    {{!-- <script type="module" src="/Js/profile/home.js"></script> --}}
+</html>

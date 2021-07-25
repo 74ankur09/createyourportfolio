@@ -1,0 +1,151 @@
+@import "../var.css";
+
+* {
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-size: 1.5vw;
+    background: linear-gradient(to right bottom,var(--mediumback), var(--darkback));
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo-container {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    grid-column: 1/2;
+    justify-self: start;
+    padding:0em 2em;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.logo{
+  width: 3.5em;
+}
+
+
+.form {
+    background-color: white;
+    width: 70vw;
+    height: 70vh;
+    border-radius: 2%;
+}
+
+.pic-part {
+    flex: 1;
+}
+
+.picForm {
+    width: 50%;
+}
+
+.form-part {
+    font-size: 0.8vh;
+    flex: 1;
+    flex-direction: column;
+}
+
+#signup-form {
+    display: none;
+    opacity: 0;
+}
+
+
+.form-head {
+    font-size: 4.5em;
+    font-family: 'Lato', 'Arial';
+    font-weight: 700;
+    margin: 0.5em;
+    letter-spacing: 0.1em;
+}
+
+.error-message {
+    opacity: 0;
+    color: red;
+    font-family: 'Lato', 'Arial';
+    margin: 0 0em 0.5em 3em;
+    width: 60%;
+    font-size: 2.5em;
+}
+
+.input-part {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-container {
+    margin: 1.5em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container input {
+    box-sizing: border-box;
+    width: 60%;
+    padding: 0.75em 2.5em;
+    font-size: 2.75em;
+    font-family: 'Roboto', 'Arial';
+    border-style: none;
+    background-color: #e6e6e6;
+    border-radius: 2.5em;
+    outline: none;
+} 
+
+.transback {
+    border-style: none;
+    background-color: #00000000;
+    outline: none;
+}
+
+.submit-button {
+    width: 50%;
+    padding: 0.75em 2.5em;
+    margin: 1.5em 0 0 0;
+    font-family: 'Roboto', 'Arial';
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 2.5em;
+    background-color: var(--lightfont);
+    border-radius: 2.5em;
+    font-family: 'Roboto', 'Arial';
+}
+
+#forgot-button {
+    font-size: 2.5em;
+    margin: 1em 0 0 0;
+    color: var(--lightback);
+}
+
+.change-form {
+    font-size: 2.5em;
+    margin: 4em 0 0 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 700px) {
+    .pic-part {
+        display: none;
+    }
+}

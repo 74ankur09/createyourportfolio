@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' 'unsafe-inline'; img-src 'self'; style-src-elem 'self' https:;  font-src https:;  script-src *">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Welcome</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/resources/image/logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/user/user.css">
+    </head>
+    <body>
+
+        <div class="logo-container" >
+            <img class="logo" src="/resources/image/logo.png">
+        </div>
+
+        <div class="logout-container" >
+            <button id="logout">Logout</button>
+        </div>
+
+
+
+        <div class="flexBox" id="form-nav"> 
+            <ul class="flexBox" id="form-nav-items">
+                <a href="/profile/{{username}}" target="_blank"><li class="form-nav-item" id="home-nav">Profile</li></a>
+                <a href="/user/color"><li class="form-nav-item" id="home-nav">Color</li></a>
+                <a href="/user/home"><li class="form-nav-item" id="home-nav">Home</li></a>
+                <a href="/user/projects"><li class="form-nav-item" id="home-nav">Projects</li></a>
+            </ul>
+
+        </div>
+
+        <div id="form">
+            <div class="flexBox"  id="login-form"> 
+                {{{body}}}
+            </div>
+
+
+        </div>
+        
+        
+        <script type="module" src="/Js/user/user.js"></script>
+    </body>
+</html>

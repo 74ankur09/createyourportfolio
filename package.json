@@ -1,0 +1,27 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "env-cmd -f ./src/config/dev.env nodemon src/app.js -e hbs,html,css,js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.3",
+    "path": "^0.12.7",
+    "validator": "^13.1.1",
+    "xss": "^1.0.8"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.12"
+  }
+}

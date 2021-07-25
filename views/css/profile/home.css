@@ -1,0 +1,158 @@
+@import "../var.css";
+
+#home { 
+    font-size: 1.45vw;
+    margin:0em 0 0 0;
+    display: grid;
+    grid-template-rows: 2fr 12vh;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Lato';
+    overflow: hidden;
+}
+
+.back {
+    position: absolute;
+    width:100vw;
+    height: 100vh;
+    top:-2vh;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+}
+
+#bigCircle {
+    position: absolute;
+    border-radius: 50%;
+    width: min(45vw,70vh);
+    height: min(45vw,70vh);
+    background-color: var(--mediumback);
+    left: 20vw;
+    opacity: 0.5;
+    transition: transform 0.5s linear;
+}
+
+#smallCircle {
+    position: absolute;
+    border-radius: 50%;
+    width: min(20vw,35vh);
+    height: min(20vw,35vh);
+    background-color: var(--lightback);
+    opacity: 0.3;
+    right: 0vw;
+    bottom: 10vw;
+}
+
+
+.about {
+    font-size: max(1.35vw,1.65vh);
+    justify-self: center;
+    align-self: center;
+    padding: 2em 0 0 0;
+}
+
+.intro {
+    color: var(--darkfont);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 4em;
+}
+
+#apostrophe {
+    color: var(--apostrophe);
+}
+
+#detail {
+    padding: 1em 0em;
+    font-size: 1.5em;
+    letter-spacing: 0.05em;
+    color: var(--lightfont);
+}
+
+.profile {
+    justify-self: center;
+    align-self: center;
+}
+
+.profilepicContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.profilepic {
+    border-radius: 50%;
+    width: max(15vw,20vh);
+    height: max(15vw,20vh);
+    box-shadow: 10px 2px 3px var(--mediumback);
+}
+
+
+.profilelinks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.profilelinks .fab {
+    font-size: 2em;
+    padding: 1em;
+    color: var(--mediumback);
+}
+
+.profilelinks .fab:hover{
+    cursor: pointer;
+    color: var(--lightfont);
+}
+
+#quotes {
+    grid-column: 1/3;
+    align-self: center;
+    justify-self: center;
+    margin: 2em 0;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    color: var(--darkfont);
+    text-align: center;
+}
+
+#quote {
+    display: inline-block;
+}
+
+#cursor {
+	display: inline-block;
+    color: var(--darkfont);
+    animation: blink .5s step-end infinite;
+    animation-delay: 1.5s;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: #0893d3; 
+	}
+}
+
+
+@media (max-width:600px) {
+    #home { 
+        font-size: 1.5vh;
+        grid-template-rows: auto auto 12vh;
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .profile {
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .quote {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    
+}

@@ -1,0 +1,266 @@
+@import "../var.css";
+
+* {
+    padding:0;
+    margin:0;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+body {
+    font-size: 1.5vw;
+    background: linear-gradient(to right bottom,var(--mediumback), var(--darkback));
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+a {
+    text-decoration: none;
+    color: var(--darkfont);
+}
+
+.logo-container {
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    grid-column: 1/2;
+    justify-self: start;
+    padding:0em 2em;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.logo{
+  width: 3.5em;
+}
+
+.logout-container {
+    position: fixed;
+    right: 8%;
+    top: 4%;
+}
+
+#logout {
+    font-size: 1.5vw;
+    width: fit-content;
+    padding: 0.5em 1em;
+    font-family: 'Roboto', 'Arial';
+    color: white;
+    font-weight: bold;
+    outline: none;
+    border-style: none;
+    background-color: var(--lightfont);
+    border-radius: 1em;
+    font-family: 'Roboto', 'Arial';
+    box-shadow: var(--darkfont) 1px 1px 2px;
+}
+
+#form-nav {
+    font-size: 0.5vw;
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    width: 14vw;
+    height: 40vh;
+    background-color: white;
+    border-radius: 0 2em 2em 0;
+    font-family: 'Lato', 'Arial';
+}
+
+
+#form-nav-items {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    color: var(--darkfont);
+}
+
+
+.form-nav-item {
+    padding: 0 0.25em;
+    font-size: 4em;
+    list-style-position: inside;
+    list-style-type:disc;
+    cursor: pointer;
+}
+
+#form {
+    width: 100%;
+    margin: 15vh 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login-form {
+    background-color: white;
+    width: 50vw !important;
+    height: auto;
+    font-size: 0.9vh;
+    flex-direction: column;
+    padding: 2em 0 4em 0;
+    border-radius: 4em;
+}
+
+#signup-form {
+    display: none;
+    opacity: 0;
+}
+
+
+.form-head {
+    font-size: 5em;
+    font-family: 'Lato', 'Arial';
+    color: var(--darkfont);
+    font-weight: 700;
+    margin: 0.5em;
+    letter-spacing: 0.1em;
+}
+
+.error-message {
+    opacity: 0;
+    color: red;
+    font-family: 'Lato', 'Arial';
+    margin: 0 0em 0.5em 3em;
+    width: 60%;
+    font-size: 2.5em;
+}
+
+.input-part {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-head {
+    font-size: 4em;
+    align-self: flex-start;
+    font-family: 'Poppins', 'Arial';
+    font-weight: 500;
+    padding: 0.5em 0;
+}
+ 
+.input-container {
+    margin: 1.5em 0em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-container input, .input-container textarea {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    padding: 0.75em 1em;
+    font-size: 2.75em;
+    font-family: 'Roboto', 'Arial';
+    border-style: none;
+    background-color: #e6e6e6;
+    outline: none;
+}
+
+.input-container textarea {
+    resize: vertical;
+}
+    
+input[type="color"] {
+    border: none;
+    padding: 0.2em;
+    width: 100%;
+    height: 4em;
+    transform: translateX();
+}
+
+label {
+    display: block;
+    width: 100%;
+    font-size: 3em;
+    text-align: left;
+    font-family: 'Roboto', 'Arial';
+}
+
+.transback {
+    border-style: none;
+    background-color: #00000000;
+    outline: none;
+}
+
+.submit-button {
+    width: 80%;
+    padding: 0.75em 2.5em;
+    margin: 2em 0;
+    font-family: 'Roboto', 'Arial';
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    font-size: 2.5em;
+    background-color: var(--lightfont);
+    border-radius: 2.5em;
+}
+
+#forgot-button {
+    font-size: 2.5em;
+    margin: 1em 0 0 0;
+    color: var(--lightback);
+}
+
+.change-form {
+    font-size: 2.5em;
+    margin: 4em 0 0 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+@media (max-width: 700px) {
+    .pic-part {
+        display: none;
+    }
+
+    #form-nav {
+        font-size: 1vw;
+        position: fixed;
+        top: 0%;
+        left: 50%;
+        width: fit-content;
+        height: fit-content;
+        min-height: 5vh;
+        margin: 0;
+        padding: 2em;
+        transform: translateX(-50%);
+        border-radius: 0 0 2em 2em;
+    }
+
+
+    #form-nav-items {
+        flex-direction: row;
+        font-size: smaller;
+    }
+
+    #login-form {
+        width: 70vw !important;
+    }
+
+
+}

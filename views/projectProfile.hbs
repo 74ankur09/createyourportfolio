@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self'; style-src 'self' https: 'unsafe-inline';  font-src https:;  script-src * ">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ankur</title>
+        <meta name="description" content="Ankur Portfolio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="/resources/image/logo.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/profile/generalStyle.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo-container">
+                <img class="logo" src="/resources/image/logo.png">
+            </div>
+            <div class="navlinks">
+                <div class="navlink"><a href="./home">Home</a></div>
+                <div class="navlink"><a href="./projects">Projects</a></div>
+            </div>
+        </nav>
+
+
+        <div class="content" id="projects">
+            <div class="heading">
+                <span class="headimg">
+                    <i class="fas fa-cogs"></i>
+                </span>
+                <span class="headtext">
+                    Projects
+                </span>
+            </div>
+
+            <div id="projects-container">
+                {{#each projects}}
+                    <div class="project-container">
+                        <div class="project-title">{{this.title}}</div>
+                        <div class="project-desc">{{{this.desc}}}</div>
+                        <div class="project-link-container">
+                            <a href="{{this.url}}"target="_blank"><i class="fab fa-github"></i>Link</a>
+                        </div>
+                    </div>
+                {{/each}}
+                
+            </div>
+        </div>
+
+    </body>
+    <script src="https://kit.fontawesome.com/7477a32428.js" crossorigin="anonymous"></script>
+    <script type="module" src="/Js/profile/main.js"></script>
+</html>
