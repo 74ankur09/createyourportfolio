@@ -4,9 +4,10 @@ const User = require('../model/userModel');
 const auth = async (req, res, next) => {
     try {
         const token = req.cookies.authToken;
-
-        const decoded = jwt.verify(token, process.env.JWT_SECRET)
-        const user = await User.findOne({ _id: decoded._id, 'tokens.token': token })
+        const SECRET = 'ankur'
+        const JWT_SECRET = process.env.JWT_SECRET || SECRET
+        const decoded = jwt.verify(token, JWT_SECRET)
+        const user = await User.findOne({ _id: decoded._id })
 
         if (!user) {
             return res.render('login', {
