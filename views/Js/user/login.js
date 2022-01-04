@@ -14,8 +14,6 @@ const gotologin = document.getElementById("goto-login");
 const gotosignup = document.getElementById("goto-signup");
 
 
-var lockSignUp = 0;
-var lockLogin = 0;
 
 // when user clicks on sign in button
 loginButton.addEventListener('click', (e) => {
@@ -23,11 +21,8 @@ loginButton.addEventListener('click', (e) => {
     e.preventDefault();
 
 
-    if (lockLogin == 1) {
-        return;
-    }
+    
 
-    lockLogin = 1;
     loginButton.style["background-color"] =  "grey" ;
     loginError.style.opacity = 0;
     loginError.innerText = '.';
@@ -73,7 +68,6 @@ loginButton.addEventListener('click', (e) => {
                 loginError.innerText = '*' + resJson.error;
             }
 
-            lockLogin = 0;
 
             loginButton.style["background-color"] =  "var(--lightfont)" ;
         }   
@@ -87,11 +81,8 @@ signupButton.addEventListener('click', (e) => {
     e.preventDefault();
 
 
-    if (lockSignUp == 1) {
-        return;
-    }
+    
 
-    lockSignUp = 1;
     signupButton.style["background-color"] =  "grey" ;
     signupError.style.opacity = 0;
     signupError.innerText = '.';
@@ -138,7 +129,6 @@ signupButton.addEventListener('click', (e) => {
                 signupError.innerText = '*' + resJson.error;
             }
 
-            lockSignUp = 0;
 
             signupButton.style["background-color"] =  "var(--lightfont)" ;
         }   
