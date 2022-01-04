@@ -127,13 +127,7 @@ const userSchema = new Schema({
         purl3: {
             type: String
         }
-    },
-    tokens: [{
-        token: {
-            type: String,
-            required: true
-        }
-    }]
+    }
 }, {
     timestamps: true
 })
@@ -303,29 +297,16 @@ userSchema.pre('save', function (next) {
     }
 })
 
-userSchema.methods.toJSON = function () {
-    const user = this;
-    const userObject = user.toObject();
 
-    delete userObject.password;
-    delete userObject.tokens;
-
-    return userObject;
-
-}
-
+const JWT_SECRET = process.env.JWT_SECRET
 userSchema.methods.generateAuthToken = async function () {
 
     const user = this
     const token = jwt.sign({
         _id: user._id.toString()
-    },  process.env.JWT_SECRET);
+    },  JWT_SECRET);
 
-    user.tokens = user.tokens.concat({
-        token
-    });
-
-    await user.save();
+    
 
     return token;
 
