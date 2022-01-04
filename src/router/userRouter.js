@@ -189,11 +189,9 @@ userRouter.post('/login', (req,res) => {
 userRouter.get('/logout', auth, async (req,res) => {
     //console.log(req.user)
     try {
-        req.user.tokens = req.user.tokens.filter( (token) => {
-            return token.token !== req.token
-        });
+
         await req.user.save();
-        res.clearCookie('authToken');
+        res.clearCookie('authToken', {path:'/user'});
         res.redirect("/user");
     } catch (e) {
         res.status(500).send(e.toString());
