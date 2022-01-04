@@ -4,8 +4,8 @@ const User = require('../model/userModel');
 const auth = async (req, res, next) => {
     try {
         const token = req.cookies.authToken;
-        const SECRET = 'ankur'
-        const JWT_SECRET = process.env.JWT_SECRET || SECRET
+        
+        const JWT_SECRET = process.env.JWT_SECRET
         const decoded = jwt.verify(token, JWT_SECRET)
         const user = await User.findOne({ _id: decoded._id })
 
